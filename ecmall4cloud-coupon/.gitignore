@@ -36,7 +36,6 @@ target/
 *.zip
 *.tar
 *.tar.gz
-*.jar
 
 ### logs ####
 /logs/
@@ -62,6 +61,5 @@ gen_code
 ### node ###
 node_modules
 
-**/mvnw
-**/mvnw.cmd
-**/.mvn
+### node ###
+
