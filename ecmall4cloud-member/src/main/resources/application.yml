@@ -1,0 +1,17 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: ecmall4cloud-member
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.56.10:3306/ecmall_ums
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.56.10:8848
+      config:
+        import-check:
+          enabled: false
