@@ -8,7 +8,6 @@ import org.apache.ibatis.annotations.Mapper;
  * 库存工作单
  * 
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:54:58
  */
 @Mapper

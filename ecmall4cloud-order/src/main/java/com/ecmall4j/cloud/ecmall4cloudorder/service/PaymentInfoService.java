@@ -10,7 +10,6 @@ import java.util.Map;
  * 支付信息表
  *
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:52:09
  */
 public interface PaymentInfoService extends IService<PaymentInfoEntity> {

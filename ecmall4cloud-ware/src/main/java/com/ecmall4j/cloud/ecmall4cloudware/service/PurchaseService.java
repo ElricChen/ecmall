@@ -10,7 +10,6 @@ import java.util.Map;
  * 采购信息
  *
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:54:58
  */
 public interface PurchaseService extends IService<PurchaseEntity> {

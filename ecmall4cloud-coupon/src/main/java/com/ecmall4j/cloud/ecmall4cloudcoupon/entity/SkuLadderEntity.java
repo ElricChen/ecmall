@@ -12,7 +12,6 @@ import lombok.Data;
  * 商品阶梯价格
  * 
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 15:33:36
  */
 @Data

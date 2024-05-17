@@ -12,7 +12,6 @@ import lombok.Data;
  * 会员统计信息
  * 
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:50:37
  */
 @Data

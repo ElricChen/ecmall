@@ -11,7 +11,6 @@ import lombok.Data;
  * 属性分组
  * 
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:53:38
  */
 @Data

@@ -10,7 +10,6 @@ import java.util.Map;
  * 订单退货申请
  *
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:52:08
  */
 public interface OrderReturnApplyService extends IService<OrderReturnApplyEntity> {

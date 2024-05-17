@@ -10,7 +10,6 @@ import java.util.Map;
  * 退货原因
  *
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:52:08
  */
 public interface OrderReturnReasonService extends IService<OrderReturnReasonEntity> {

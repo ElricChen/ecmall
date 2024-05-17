@@ -11,7 +11,6 @@ import lombok.Data;
  * 退货原因
  * 
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:52:08
  */
 @Data

@@ -11,7 +11,6 @@ import lombok.Data;
  * 优惠券分类关联
  * 
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 15:33:36
  */
 @Data

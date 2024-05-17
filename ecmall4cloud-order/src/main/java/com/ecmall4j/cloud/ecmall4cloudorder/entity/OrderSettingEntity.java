@@ -11,7 +11,6 @@ import lombok.Data;
  * 订单配置信息
  * 
  * @author Elric
- * @email sunlightcs@gmail.com
  * @date 2024-05-16 16:52:08
  */
 @Data
