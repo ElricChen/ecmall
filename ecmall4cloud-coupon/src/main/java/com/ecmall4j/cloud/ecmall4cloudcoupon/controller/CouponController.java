@@ -4,11 +4,12 @@ import com.ecmall4j.cloud.ecmall4cloudcoupon.entity.CouponEntity;
 import com.ecmall4j.cloud.ecmall4cloudcoupon.service.CouponService;
 import ecmall4j.cloud.ecmall4cloudcommon.common.utils.PageUtils;
 import ecmall4j.cloud.ecmall4cloudcommon.common.utils.R;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -20,6 +21,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("ecmall4cloudcoupon/coupon")
 public class CouponController {
+    private static final Logger log = LoggerFactory.getLogger(CouponController.class);
+    private String serverAddr;
     @Autowired
     private CouponService couponService;
 
@@ -29,7 +32,10 @@ public class CouponController {
     @RequestMapping("/list")
     public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = couponService.queryPage(params);
-
+        List<String> objects = Optional.ofNullable(page.getList()).orElse(Collections.EMPTY_LIST);
+        objects.add(serverAddr);
+        page.setList(objects);
+        log.info(serverAddr);
         return R.ok().put("page", page);
     }
 

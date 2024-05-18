@@ -1,17 +1,41 @@
-server:
-  port: 12000
+#server:
+#  port: 12000
 spring:
   application:
     name: ecmall4cloud-product
-  datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://192.168.56.10:3306/ecmall_pms
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    username: root
+#    password: root
+#    url: jdbc:mysql://192.168.56.10:3306/ecmall_pms
+#    driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
+      server-addr: 192.168.56.10:8848
+      # 以下配置项必须填写
+      username: 'nacos'
+      password: 'nacos'
+      config:
+        namespace: 0d4318d2-36e7-47bf-8821-dcd510e20c46
       discovery:
         server-addr: 192.168.56.10:8848
-      config:
-        import-check:
-          enabled: false
+  config:
+    import:
+      - nacos:ecmall4cloud-product.yml?refreshEnabled=true&group=DEFAULT_GROUP
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+##mybatis-plus:
+##  mapper-locations: classpath:/mapper/**/*.xml
+##  #实体扫描，多个package用逗号或者分号分隔
+###  typeAliasesPackage: com.ecmall4j.cloud.ecmall4cloudcoupon.entity
+##  global-config:
+##    #数据库相关配置
+##    db-config:
+##      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+##      id-type: AUTO
+##      logic-delete-value: -1
+##      logic-not-delete-value: 0
+##    banner: false
